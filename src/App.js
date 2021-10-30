@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AddUser from "./components/adduser";
+import AllUsers from "./components/allusers";
+import Crud from "./components/crud";
+import NavBar from "./components/NavBar";
+import NotFound from "./components/NotFound";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route exact path="/add" component={AddUser}></Route>
+          <Route exact path="/" component={Crud}></Route>
+          <Route exact path="/all" component={AllUsers}></Route>
+          <Route component={NotFound}></Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
