@@ -1,7 +1,8 @@
 import { FormControl, FormGroup, Input, InputLabel , Button, makeStyles, Typography } from "@material-ui/core"
-import { useState } from "react"
-import { addUser } from "../service/api"
-import { useHistory } from "react-router"
+import React, { useEffect, useState } from "react"
+import { editUser, getUsers } from "../service/api"
+import { useHistory , useParams } from "react-router"
+  
 
 const useStyle = makeStyles({
     container:{
@@ -20,26 +21,36 @@ const inititalValues = {
     phone : ''
 }
 
-const AddUser = () =>{
+const EditUser = () =>{
     const [user , setUser] = useState(inititalValues)
     const { name , username , email , phone } = user        // destructuring  
+    const { id } = useParams();
     const classes = useStyle();
     const history = useHistory();
 
+    useEffect(()=>{
+        loadUserData();
+    },[]);
+
+    const loadUserData = async () =>{
+        const response = await getUsers(id)
+        setUser(response.data)
+    }
+
     const onValueChange = (e) =>{
         // console.log(e.target.value)
-        setUser({...user,[e.target.name]: e.target.value})
+        setUser({ ...user , [e.target.name]: e.target.value})
         console.log(user)
     }
 
-    const addUserDetails = async()=>{
-        await addUser(user)
+    const editUserDetails = async()=> {
+        await editUser(id , user);
         history.push('./all') 
     }
 
     return (
         <FormGroup className={classes.container}>
-            <Typography variant="h4">Add User</Typography>
+            <Typography variant="h4">Edit User</Typography>
             <FormControl>
                 <InputLabel>Name</InputLabel>
                     <Input onChange={(e) => onValueChange(e)} name='name' value={name}/>
@@ -56,9 +67,10 @@ const AddUser = () =>{
                 <InputLabel>Phone</InputLabel>
                     <Input onChange={(e) => onValueChange(e)} name='phone' value={phone}/>
             </FormControl>
-            <Button variant="contained" color="primary" onClick={()=>addUserDetails()}>Submit User</Button>
+            <Button variant="contained" color="primary" onClick={() => editUserDetails()}>Edit User</Button>
         </FormGroup>
     )
 }
 
-export default AddUser
+export default React.memo(EditUser)
+// export default EditUser

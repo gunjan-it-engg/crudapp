@@ -1,22 +1,22 @@
 {
   "users": [
     {
-      "name": "Rohit Sharma",
-      "username": "hitman",
+      "name": "Rohit Sharmasfgdfg",
+      "username": "hitting gundfasdfsa",
       "email": "rohitsharma@gmail.com",
       "phone": "953445345",
       "id": 1
     },
     {
       "name": "Virat Kolhi",
-      "username": "virat",
+      "username": "anushka",
       "email": "viratkolhia@gmail.com",
-      "phone": "9534453436",
+      "phone": "108",
       "id": 2
     },
     {
       "name": "MS Dhoni",
-      "username": "helicopter",
+      "username": "helicopter ys",
       "email": "msDhoni@gmail.com",
       "phone": "6326732783",
       "id": 3
@@ -36,18 +36,11 @@
       "id": 5
     },
     {
-      "name": "sanjay kumawat",
-      "username": "sanju",
-      "email": "sanjay@gmail.com",
-      "phone": "9845232345",
+      "name": "loveless ",
+      "username": "adda",
+      "email": "gunjanshrimali@gmail.com",
+      "phone": "9521109653",
       "id": 6
-    },
-    {
-      "name": "Jayesh sharma",
-      "username": "jayesh_sharma",
-      "email": "jayesh@gmail.com",
-      "phone": "9399056021",
-      "id": 7
     }
   ]
 }
