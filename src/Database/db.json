@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "name": "Rohit Sharma",
+      "username": "hitman",
+      "email": "rohitsharma@gmail.com",
+      "phone": "953445345",
+      "id": 1
+    },
+    {
+      "name": "Virat Kolhi",
+      "username": "virat",
+      "email": "viratkolhia@gmail.com",
+      "phone": "9534453436",
+      "id": 2
+    },
+    {
+      "name": "MS Dhoni",
+      "username": "helicopter",
+      "email": "msDhoni@gmail.com",
+      "phone": "6326732783",
+      "id": 3
+    },
+    {
+      "name": "Jasprit Bumrah",
+      "username": "bumrah",
+      "email": "jaspritbum@gmail.com",
+      "phone": "9533453456",
+      "id": 4
+    },
+    {
+      "name": "Pankaj kumar",
+      "username": "pankaj_kumar",
+      "email": "pankaj.lanetteam@gmail.com",
+      "phone": "9399056021",
+      "id": 5
+    },
+    {
+      "name": "sanjay kumawat",
+      "username": "sanju",
+      "email": "sanjay@gmail.com",
+      "phone": "9845232345",
+      "id": 6
+    },
+    {
+      "name": "Jayesh sharma",
+      "username": "jayesh_sharma",
+      "email": "jayesh@gmail.com",
+      "phone": "9399056021",
+      "id": 7
+    }
+  ]
+}

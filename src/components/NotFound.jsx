@@ -1,7 +1,8 @@
+import notfound from '../Assets/images/notfound.jpg'
 
 const NotFound = () =>{
     return (
-        <h2>Not Found</h2>
+        <img src={notfound} style={{width:'35%'}}/>
     )
 }
 
