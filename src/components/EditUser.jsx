@@ -45,7 +45,7 @@ const EditUser = () =>{
 
     const editUserDetails = async()=> {
         await editUser(id , user);
-        history.push('./all') 
+        history.push('/all') 
     }
 
     return (
