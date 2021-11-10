@@ -29,8 +29,8 @@ export const getUsers = async (id) => {
   return await axios.get(`${usersUrl}/${id}`);
 };
 
-export const addUser = async (user) => {
-  return await axios.post(`${usersUrl}/add`, user);
+export const addUser = async (values) => {
+  return await axios.post(`${usersUrl}/add`, values);
 };
 
 export const deleteUser = async (id) => {
