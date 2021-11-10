@@ -98,6 +98,7 @@ const AddUser = () => {
             type="text"
             name="name"
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             value={formik.values.name}
             error={formik.errors.name}
           />
@@ -106,23 +107,30 @@ const AddUser = () => {
           ) : null}
         </FormControl>
         <FormControl style={{ margin: "inherit" }}>
-          <InputLabel error={formik.errors.name} htmlFor="username">
+          <InputLabel
+            error={formik.touched.username && formik.errors.username}
+            htmlFor="username"
+          >
             Username
           </InputLabel>
           <Input
             id="username"
-            type="te"
+            type="text"
             name="username"
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             value={formik.values.username}
-            error={formik.errors.name}
+            error={formik.errors.username && formik.touched.username}
           />
-          {formik.errors.username ? (
+          {formik.touched.username && formik.errors.username ? (
             <div style={{ color: "red" }}>{formik.errors.username}</div>
           ) : null}
         </FormControl>
         <FormControl style={{ margin: "inherit" }}>
-          <InputLabel error={formik.errors.name} htmlFor="email">
+          <InputLabel
+            error={formik.touched.email && formik.errors.email}
+            htmlFor="email"
+          >
             Email
           </InputLabel>
           <Input
@@ -130,15 +138,19 @@ const AddUser = () => {
             type="email"
             name="email"
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             value={formik.values.email}
-            error={formik.errors.name}
+            error={formik.touched.email && !!formik.errors.email}
           />
-          {formik.errors.email ? (
+          {formik.touched.email && formik.errors.email ? (
             <div style={{ color: "red" }}>{formik.errors.email}</div>
           ) : null}
         </FormControl>
         <FormControl style={{ margin: "inherit" }}>
-          <InputLabel error={formik.errors.name} htmlFor="phone">
+          <InputLabel
+            error={formik.touched.phone && formik.errors.phone}
+            htmlFor="phone"
+          >
             Phone
           </InputLabel>
           <Input
@@ -146,10 +158,11 @@ const AddUser = () => {
             type="number"
             name="phone"
             onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             value={formik.values.phone}
-            error={formik.errors.name}
+            error={formik.touched.phone && formik.errors.phone}
           />
-          {formik.errors.phone ? (
+          {formik.touched.phone && formik.errors.phone ? (
             <div style={{ color: "red" }}>{formik.errors.phone}</div>
           ) : null}
         </FormControl>
