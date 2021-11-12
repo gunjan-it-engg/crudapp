@@ -22,15 +22,17 @@
 import axios from "axios";
 
 // const usersUrl = 'http://localhost:3003/users';
-const usersUrl = "http://localhost:8080/users";
+// const usersUrl = "http://localhost:8080/users";
+const usersUrl = "http://localhost:3000/employe";
+const authUrl = "http://localhost:3000/users";
 
 export const getUsers = async (id) => {
   id = id || "";
   return await axios.get(`${usersUrl}/${id}`);
 };
 
-export const addUser = async (user) => {
-  return await axios.post(`${usersUrl}/add`, user);
+export const addUser = async (values) => {
+  return await axios.post(`${usersUrl}/add`, values);
 };
 
 export const deleteUser = async (id) => {
@@ -39,4 +41,12 @@ export const deleteUser = async (id) => {
 
 export const editUser = async (id, user) => {
   return await axios.put(`${usersUrl}/${id}`, user);
+};
+
+export const addReg = async (values) => {
+  return await axios.post(`${authUrl}`, values);
+};
+
+export const loginUser = async (values) => {
+  return await axios.post(`${authUrl}/login`, values);
 };
