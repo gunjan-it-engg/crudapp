@@ -1,17 +1,11 @@
 import React from "react";
 import { withFormik } from "formik";
-<<<<<<< HEAD
 import { connect } from "react-redux";
-=======
->>>>>>> 1a643b6c9db76a5cd347fbecbb43e865b5ed2821
 import { Grid, Paper, Avatar, TextField, Button } from "@material-ui/core";
 import LockIcon from "@material-ui/icons/Lock";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-<<<<<<< HEAD
 import { loginUser } from "../service/api";
-=======
->>>>>>> 1a643b6c9db76a5cd347fbecbb43e865b5ed2821
 // import { useHistory } from "react-router";
 
 const Login = (props) => {
@@ -116,11 +110,8 @@ const MyEnhancedForm = withFormik({
   },
 
   handleSubmit: (values, { props, setSubmitting }) => {
-<<<<<<< HEAD
     console.log("props", props);
     loginUser(values);
-=======
->>>>>>> 1a643b6c9db76a5cd347fbecbb43e865b5ed2821
     setTimeout(() => {
       alert(
         `${values.username} your are sucessfully logged in`,
@@ -134,13 +125,10 @@ const MyEnhancedForm = withFormik({
   displayName: "BasicForm",
 })(Login);
 
-<<<<<<< HEAD
 // function mapStateToProps(state) {
 //   const { user } = state;
 //   return { isLoggedIn: user.isLoggedIn };
 // }
 
 // export default connect(mapStateToProps)(MyEnhancedForm);
-=======
->>>>>>> 1a643b6c9db76a5cd347fbecbb43e865b5ed2821
 export default MyEnhancedForm;
