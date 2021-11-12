@@ -37,7 +37,11 @@ const AllUsers = () => {
 
   useEffect(() => {
     getAllUsers();
+<<<<<<< HEAD
   }, []);
+=======
+  });
+>>>>>>> 1a643b6c9db76a5cd347fbecbb43e865b5ed2821
 
   const getAllUsers = async () => {
     const response = await getUsers();
