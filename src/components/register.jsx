@@ -2,10 +2,7 @@ import React from "react";
 import { withFormik } from "formik";
 import { Grid, Paper, Avatar, TextField, Button } from "@material-ui/core";
 import LockIcon from "@material-ui/icons/Lock";
-<<<<<<< HEAD
 import { addReg } from "../service/api";
-=======
->>>>>>> 1a643b6c9db76a5cd347fbecbb43e865b5ed2821
 
 const Register = (props) => {
   const { values, touched, errors, handleChange, handleBlur, handleSubmit } =
@@ -147,10 +144,7 @@ const MyEnhancedForm = withFormik({
   },
 
   handleSubmit: (values, { props, setSubmitting }) => {
-<<<<<<< HEAD
     addReg(values);
-=======
->>>>>>> 1a643b6c9db76a5cd347fbecbb43e865b5ed2821
     setTimeout(() => {
       alert(
         `${values.name} your are sucessfully registered`,
